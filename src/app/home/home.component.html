@@ -1,0 +1,47 @@
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+ 
+<app-header></app-header>
+				        
+<app-content></app-content>
+
+<app-footer></app-footer>
+
+
+
+	    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+	    <script>
+	    	$(document).ready(function(){
+      			$('.carousel').carousel();
+    		});
+	    </script>
+	    <script>
+	    	function myFunction(){
+	    		var x = document.getElementsByClassName("example");
+	    		var y = document.getElementsByClassName("change");
+	    		//console.log(x);
+	    		for(var i=0;i<x.length;i++){
+					if(x[i].hash =='men.html'){
+		    			y[0].innerHTML="Men";
+		    			//console.log(y.innerHTML);
+		    			//break;
+		    		}
+		    		else if(x[i].hash=='women.html'){
+		    			y[0].innerHTML="Women";
+		    			//break;
+		    		}
+		    		else if(x[i].hash=='#three!'){
+		    			y[0].innerHTML="HELLO WORLD 2";
+		    			//return;
+		    		}
+		    		else{
+		    			
+		    		}
+	    		}	    		
+	    	}    	
+	    </script>  
+   

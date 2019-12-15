@@ -1,0 +1,44 @@
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+<app-header></app-header>
+<br><br><br>
+
+<div style="margin-top: 3%"></div>
+<div style="max-width: 28%; max-height: 30%;">
+    <div class="col s12 m7">
+      <div class="card">
+        <div class="card-image">
+          <img src="http://www.etq-amsterdam.com//wp-content//uploads//2018//04//2-1400x0-c-default.jpg">
+          <span class="card-title">Men</span>
+        </div>
+        <div class="card-content">
+          <p>A thoughtful range of ETQ silhouettes for men. Premium quality products that last, with aesthetics that match the quality.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">Learn more</a>
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- <div style="float:left"> -->
+<ul style="list-style-type: none">
+	<li *ngFor="let man of men | paginate: { itemsPerPage: 10, currentPage: p}" style="display:inline-block; width: 30%; float:left ">
+		<div>
+			<a href="#"><img src="http://localhost:3333/api/images/{{man.hash}}" 
+				style=" margin-left: 3%; width: 50%; height: 50%; align-items: center ">	
+				<h5 style="padding-left: 24%; color:black">{{man.name}}</h5>
+			</a>		
+		</div>					
+	</li>
+</ul>
+<!-- </div> -->
+
+<div style="clear:both"></div>
+<div>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+
+<app-footer></app-footer>

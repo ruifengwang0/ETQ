@@ -1,0 +1,134 @@
+<header>
+    <nav style="position: fixed; z-index: 1000;">
+		<div class="nav-wrapper">
+			<a href="home" class="brand-logo" style="padding-left: 1%">E T Q </a>
+				<!-- <div style="text-align: center">Hello World</div>> -->
+				<ul id="nav-mobile" class="hide-on-med-and-down" style="padding-left: 8%;">
+				    <li><a href="./men">Men</a></li>
+				    <li><a href="./women">Women</a></li>
+				    <li><a href="#">Journal</a></li>
+				    <li><a href="#">Permanent collection</a></li>
+				    <!-- <li style="color:black">Search: </li>
+				    <li><form id ="filter">
+				    	<input type="text" [(ngModel)]="term" />
+				    </form>	</li>
+				    <ul *ngFor="let ninja of ninjas">
+				    	<span [ngStyle]="{background: black}">belt</span>
+				    	<h3>{{ninja.name | filter}}</h3>			        				   
+				    </ul> -->
+				</ul>
+
+			    <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+				    <!-- <li><a href="#">Search</a></li> -->
+
+				    <li><a href="#">Help</a></li>
+				    <li><button type="button" class="btn pink" (click)="openModal(template)">My account</button>
+<ng-template #template>
+	
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Login</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+  <form method="post" (ngSubmit)="formSubmit()">
+									
+	 Account: <input type="text" name="account" [(ngModel)] = "account" required minlength="4" #name="ngModel"/><br>
+
+	<div *ngIf="name.invalid && (name.dirty || name.touched)"
+	     class="alert alert-danger">
+		  <div *ngIf="name.errors.required">
+		    Name is required.
+		  </div>
+		  <div *ngIf="name.errors.minlength">
+		    Name must be at least 4 characters long.
+		  </div>
+	</div>
+
+
+	 Password: <input type="password" name="password" [(ngModel)] = "password" required minlength="6" #pass="ngModel"><br>	
+
+	<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+		     class="alert alert-danger">
+			  <div *ngIf="pass.errors.required">
+			    Password is required.
+			  </div>
+			  <div *ngIf="pass.errors.minlength">
+			    Password must be at least 6 characters long.
+			  </div>
+	</div>
+
+	 <button type="submit">Login</button> 
+ </form>
+  </div>
+
+</ng-template>
+
+
+
+<li><button type="button" class="btn purple" (click)="openModal2(template2)">Register</button>
+				        <ng-template #template2>
+  <div>
+  	<button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4>Register</h4>
+    <br><br>
+
+	<form method="post" (ngSubmit)="register($event)">
+		<div>
+		  Account: <input type="text" name="account" [(ngModel)] = "account" required minlength="4" #name="ngModel" ><br>
+
+		<div *ngIf="name.invalid && (name.dirty || name.touched)"
+		     class="alert alert-danger">
+			  <div *ngIf="name.errors.required">
+			    Name is required.
+			  </div>
+			  <div *ngIf="name.errors.minlength">
+			    Name must be at least 4 characters long.
+			  </div>
+		</div>
+
+		  Password: <input type="text" name="password" [(ngModel)] = "password" required minlength="6" #pass="ngModel" ><br>
+
+		<div *ngIf="pass.invalid && (pass.dirty || pass.touched)"
+				     class="alert alert-danger">
+					  <div *ngIf="pass.errors.required">
+					    Password is required.
+					  </div>
+					  <div *ngIf="pass.errors.minlength">
+					    Password must be at least 6 characters long.
+					  </div>
+			</div>
+
+
+
+
+		  Re-type password: <input type="text" name="password2" [(ngModel)] = "password2" required minlength="6" #repass="ngModel"/><br>
+
+		  <div *ngIf="repass.invalid && (repass.dirty || repass.touched)"
+				     class="alert alert-danger">
+					  <div *ngIf="repass.errors.required">
+					    Password is required.
+					  </div>
+					  <div *ngIf="repass.errors.minlength">
+					    Password must be at least 6 characters long.
+					  </div>
+			</div>			
+
+		  <button type="submit">Register</button>
+		</div> 
+	</form>
+	
+  </div>
+  <div class="modal-body">
+    Create an account to view your orders, return or adjust your personal information
+  </div>
+</ng-template></li>
+<li><a class="btn-floating pulse" href="#"><i class="material-icons">face</i></a></li>
+			</ul>
+		</div>
+	</nav>
+</header>
